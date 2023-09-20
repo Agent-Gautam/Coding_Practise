@@ -1,19 +1,12 @@
 #include <iostream>
 using namespace std;
-void print_arr(int arr[])
+bool ispresent(int , int [],int);
+void print_arr(int arr[],int len)
 {
-    for (int x: arr)
+    for (int i = 0; i < len; i++)
     {
-        cout << x << " ";
+        cout << arr[i] << " ";
     }
-}
-bool ispresent(int el, int arr[],int len){
-    for(int i = 0; i < len; i++){
-        if(arr[i] == el){
-            return true;
-        }
-    }
-    return false;
 }
 int main(){
     int a[] = {1,2,3,4,5,1,2,1,2,5};
@@ -35,11 +28,15 @@ int main(){
         }
 
     }
-    cout << "1 = > ";
-    print_arr(unique);
-    cout << "\n 2 = > ";
-    print_arr(freq);
-    // for(int u = 0; u < ind; u++){
-    //     cout<<unique[ind]<<" "<<freq[ind]<<endl;
-    // }
+    for(int u = 0; u < ind; u++){
+        cout<<unique[u]<<" "<<freq[u]<<endl;
+    }
+}
+bool ispresent(int el, int arr[],int len){
+    for(int i = 0; i < len; i++){
+        if(arr[i] == el){
+            return true;
+        }
+    }
+    return false;
 }
