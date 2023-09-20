@@ -39,7 +39,5 @@ int main(){
     print_arr(unique);
     cout << "\n 2 = > ";
     print_arr(freq);
-    // for(int u = 0; u < ind; u++){
-    //     cout<<unique[ind]<<" "<<freq[ind]<<endl;
-    // }
+    
 }
