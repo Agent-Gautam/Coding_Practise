@@ -28,6 +28,7 @@ int main(){
         }
 
     }
+<<<<<<< HEAD
     for(int u = 0; u < ind; u++){
         cout<<unique[u]<<" "<<freq[u]<<endl;
     }
@@ -39,4 +40,11 @@ bool ispresent(int el, int arr[],int len){
         }
     }
     return false;
+=======
+    cout << "1 = > ";
+    print_arr(unique);
+    cout << "\n 2 = > ";
+    print_arr(freq);
+    
+>>>>>>> d20aca60e31ba4e8a4bfde0afca460e7ed29c0a3
 }
