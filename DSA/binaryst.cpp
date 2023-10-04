@@ -7,30 +7,37 @@ typedef struct node{
     node* right;
 }node;
 
-node* bst(int arr[], int b, int m, int e){
-    if(m == 0){
-        node *root = new node;
-        root->value = arr[0];
-        root->left = NULL;
-        root->right = NULL;
-        return root;                                            //{1,2,3,4,5}
+node* newnode(int v){
+    node *N = new node;
+    N->value = v;
+    N->left = NULL;
+    N->right = NULL;
+    return N;
+}
+
+void bst(node* &root, int arr[], int b, int e){
+    int m = b + (e-b)/2;
+    if(e < b){
+        return;
     }
-    if(m == 9){
-        node *root = new node;                                  //(0,1,2)       2
-        root->value = arr[9];                                   //(0,0,1)       1
-        root->left = NULL;
-        root->right = NULL;
-        return root;                                            //(1,1,2)
+    root = newnode(arr[m]);
+    bst(root->left, arr, b, m-1);
+    bst(root->right, arr, m+1, e);
+}
+
+void print(node* root){
+    if(root == NULL){
+        return;
     }
-    node* root = new node;
-    root->value = arr[m];
-    root->left = bst(arr, b, m/2, m);
-    root->right = bst(arr, m, m + m/2, e);
-    return root;
+    print(root->left);
+    cout<<root->value<<" ";
+    print(root->right);
 }
 
 int main(){
-    int arr[] = {1,2,3,4,5};
-    node* ptr = bst(arr, 0, 2, 4);
-    cout<<ptr->value<<endl;
+    int arr[] = {1,2,3,4,5,6,7,8,9};
+    node* ptr = NULL;
+    bst(ptr, arr, 0, 8);
+    print(ptr);
+    cout<<"\n";
 }
