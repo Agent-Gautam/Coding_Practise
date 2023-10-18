@@ -23,15 +23,15 @@ void print(node* root){
     print(root->right);
 }
 
-int isbst(node* parent, node* ptr, int final){
-    final = 1;
-    if(ptr == NULL){
-        return parent->data;
-        parent == NULL;
-        delete parent;
-    }
-    if(parent->data )
-}
+// int isbst(node* parent, node* ptr, int final){
+//     final = 1;
+//     if(ptr == NULL){
+//         return parent->data;
+//         parent == NULL;
+//         delete parent;
+//     }
+//     if(parent->data )
+// }
 
 int main(){
     node* root = newnode(10);
