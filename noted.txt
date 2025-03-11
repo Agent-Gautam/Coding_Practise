@@ -1,0 +1,13 @@
+The major purpose of c++ programming is to introduce the concept of object orientation to the c programming language . the object oriented programming is a pattern that provides many concepts such as inheritance, polymorphism, data binding etc.
+The main aim of object oriented programming lang is to bind together the data and dthe functions, that operate on them so that no other part of the code access this data except that function
+There are some basic concepts classes objects, encapsulation, abstraction, polymorphism, inheritance , binding , message passing.
+Object means real world entities such as pen chair table etc. 
+Programming is a methology  to design a program using classes and objects. It simplifies software development and maintainance by providing concepts.
+An object can be defines as instance of a class.it contains an address and take up some space in memory. 
+Collection of objects is called class.
+
+Inheritance : an object aquires all the properties and behavior of a parent object it id known as parent object.
+Polymorphism : if one task is performed in different way .
+Abstraction : hiding internal details and showing functionality is known as abstraction.
+Encapsulation : binding code and data together into a single unit is known as encapsulation
+
